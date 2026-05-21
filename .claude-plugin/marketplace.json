@@ -1,0 +1,22 @@
+{
+  "name": "Alex-MP",
+  "description": "Alex's personal Claude Code plugin marketplace",
+  "owner": {
+    "name": "Alex",
+    "email": "alexdimassimooo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "plugin1",
+      "description": "Alex's personal skills — plugin 1",
+      "version": "1.0.0",
+      "source": "./plugin1"
+    },
+    {
+      "name": "plugin2",
+      "description": "Alex's personal skills — plugin 2",
+      "version": "1.0.0",
+      "source": "./plugin2"
+    }
+  ]
+}

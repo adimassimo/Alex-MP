@@ -1,0 +1,12 @@
+{
+  "name": "plugin1",
+  "description": "Alex's personal skills — plugin 1",
+  "version": "1.0.0",
+  "author": {
+    "name": "Alex",
+    "email": "alexdimassimooo@gmail.com"
+  },
+  "homepage": "https://github.com/adimassimo/Alex-MP",
+  "repository": "https://github.com/adimassimo/Alex-MP",
+  "license": "MIT"
+}
