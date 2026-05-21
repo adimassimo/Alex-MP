@@ -7,10 +7,10 @@
   },
   "plugins": [
     {
-      "name": "plugin1",
-      "description": "Alex's personal skills — plugin 1",
+      "name": "AlexUtils",
+      "description": "Alex's personal utility skills",
       "version": "1.0.0",
-      "source": "./plugin1"
+      "source": "./AlexUtils"
     },
     {
       "name": "plugin2",
