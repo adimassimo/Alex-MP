@@ -25,7 +25,7 @@ Tiers are building blocks, not a strict ladder. Use each tier when the question 
 
 ### Tier 1 — Metadata (almost always)
 
-Run `scripts/list-repos.sh` to get a compact pipe-delimited table of repos: `name | owner | lang | updated | stars | description`.
+Run `${CLAUDE_PLUGIN_ROOT}/skills/gh-explore/scripts/list-repos.sh` to get a compact pipe-delimited table of repos: `name | owner | lang | updated | stars | description`.
 
 Use flags to narrow server-side / output-side:
 - `--lang <name>` — primary language contains
@@ -38,7 +38,7 @@ Reuse Tier 1 output across follow-up questions in the same conversation — do n
 
 ### Tier 2 — READMEs (when content/context needed)
 
-For each shortlisted repo (≤5), run `scripts/repo-readme.sh <owner/name> --max-chars 4000`. Use this when:
+For each shortlisted repo (≤5), run `${CLAUDE_PLUGIN_ROOT}/skills/gh-explore/scripts/repo-readme.sh <owner/name> --max-chars 4000`. Use this when:
 - The question is about what a repo *is* or *does*
 - Multiple repos match by name and you need to disambiguate
 - You need grounding before reporting on PRs/issues
@@ -57,7 +57,7 @@ Use inline `gh` calls, scoped to the shortlisted repo(s):
 For every question:
 
 1. **Parse the question.** Identify: specific repo (named or implied)? category (language, topic, recency)? what data type — metadata, content, PRs/issues/code?
-2. **Tier 1.** Run `scripts/list-repos.sh` with the most specific filters that match the question. Reuse prior Tier 1 output when answering follow-ups.
+2. **Tier 1.** Run `${CLAUDE_PLUGIN_ROOT}/skills/gh-explore/scripts/list-repos.sh` with the most specific filters that match the question. Reuse prior Tier 1 output when answering follow-ups.
 3. **Shortlist** — ≤5 candidate repos by name match, language, topic, or recency.
 4. **Tier 2 if needed.** Fetch READMEs only for the shortlist.
 5. **Tier 3 if needed.** Run the targeted `gh` call(s) on the shortlist.
